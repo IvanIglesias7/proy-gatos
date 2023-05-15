@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../services/firestore/firestore.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MaterialModuloModule } from '../angular-mat/angular-mat.module';
 @Component({
   selector: 'app-cats',
   templateUrl: './cats.component.html',
@@ -17,9 +18,10 @@ export class CatsComponent implements OnInit {
     id: new FormControl('')
   });
 
-  goToAdd() {
-    this.router.navigate(['form']);
+  editCat(catId: string) {
+    this.router.navigate(['edit-cat', catId]);
   }
+
   constructor(
     private firestoreService: FirestoreService,
     private router: Router

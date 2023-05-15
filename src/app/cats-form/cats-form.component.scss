@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin: 0 auto;
+    
+    .mat-form-field {
+      width: 100%;
+      margin-bottom: 20px;
+      
+      .mat-form-field-label {
+        color: rgba(0, 0, 0, 0.54); /* Establece el color del texto del label */
+      }
+      
+      .mat-input-element {
+        color: #000; /* Establece el color del texto del campo de entrada */
+      }
+      
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  

@@ -6,6 +6,7 @@ import { CatsFormComponent } from './cats-form/cats-form.component';
 const routes: Routes = [
   {path: '', component: CatsComponent},
   {path: 'form', component: CatsFormComponent},
+  {path: 'edit-cat/:id', component: CatsFormComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

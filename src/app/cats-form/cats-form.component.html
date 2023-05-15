@@ -1,1 +1,17 @@
-<p>cats-form works!</p>
+<form (ngSubmit)="agregarGato()" class="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput type="text" id="nombre" name="nombre" [(ngModel)]="gato.nombre" required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>URL</mat-label>
+      <input matInput type="text" id="url" name="url" [(ngModel)]="gato.url" required>
+    </mat-form-field>
+    
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit">Agregar Gato</button>
+      <button mat-raised-button color="primary" routerLink="'/'">Volver</button>
+    </div>
+  </form>
+  

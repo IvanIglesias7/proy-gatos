@@ -1,24 +1,22 @@
 <div class="grd">
-    <div class="grd-row">
-      <div class="grd-row-col-2">
-          <h1>🐱 Gatos 🐱</h1>
+  <div class="grd-row">
+    <div class="grd-row-col-2">
+      <h1>🐱 Gatos 🐱</h1>
+    </div>
+    <div class="grd-row-col-4">
+      <div class="cats_container">
+        <mat-card *ngFor="let cat of cats" class="cat-card">
+          <img mat-card-image [src]="cat.data.url" alt="Imagen de gato">
+          <mat-card-content>
+            <p>{{ cat.data.nombre }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" (click)="editCat(cat.id)">Editar</button>
+            <button mat-button color="warn" class="btn2">Eliminar</button>
+          </mat-card-actions>
+        </mat-card>
       </div>
-      <div class="grd-row-col-4">
-        <div class="cats_container">
-          <div class="media" *ngFor="let cat of cats">
-            <div class="media-figure">
-              <img [src]="cat.data.url">
-            </div>
-            <div class="media-body">
-              <p>{{cat.data.nombre}}</p>
-              <div class="btn--group">
-                <button class="btn--green btn--s btn1">Editar</button>
-                <button class="btn--red btn--s btn2">Eliminar</button>
-              </div>
-              <button (click)="goToAdd()">Añadir gato</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <button mat-raised-button color="primary" routerLink="form">Añadir gato</button>
     </div>
   </div>
+</div>

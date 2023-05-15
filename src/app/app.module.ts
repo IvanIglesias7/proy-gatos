@@ -8,6 +8,8 @@ import { CatsComponent } from './cats/cats.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CatsFormComponent } from './cats-form/cats-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModuloModule } from './angular-mat/angular-mat.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CatsFormComponent } from './cats-form/cats-form.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModuloModule
   ],
   providers: [],
   bootstrap: [AppComponent]
